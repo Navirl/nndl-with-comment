@@ -1,0 +1,9 @@
+[submodule "nicodanmaku2ass"]
+	path = nicodanmaku2ass
+	url = https://github.com/fireattack/nicodanmaku2ass.git
+[submodule "nicojson2xml"]
+	path = nicojson2xml
+	url = https://github.com/kagekiyo7/nicojson2xml.git
+[submodule "yt-dlpjson2nicojson"]
+	path = yt-dlpjson2nicojson
+	url = https://github.com/Navirl/yt-dlpjson2nicojson.git
