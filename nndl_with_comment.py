@@ -17,9 +17,11 @@ if args.location:
 else:
     WORKDIR = Path(__file__).parent
 
-YTDLP2JSON = WORKDIR / "yt-dlpjson2nicojson/yt-dlpjson2nicojson.py"
-NICOJSON2XML = WORKDIR / "nicojson2xml/nicojson2xml.py"
-DANMAKU2ASS = WORKDIR / "nicodanmaku2ass/danmaku2ass.py"
+TOOLSPARENT = Path(__file__).parent
+
+YTDLP2JSON = TOOLSPARENT / "yt-dlpjson2nicojson/yt-dlpjson2nicojson.py"
+NICOJSON2XML = TOOLSPARENT / "nicojson2xml/nicojson2xml.py"
+DANMAKU2ASS = TOOLSPARENT / "nicodanmaku2ass/danmaku2ass.py"
 
 url = args.url.strip()
 if not url:
