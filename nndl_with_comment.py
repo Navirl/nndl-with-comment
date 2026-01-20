@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess
 import sys
 import argparse
-from process_video import process_video_files
+from process_video import convert_json_to_ass_dir
 
 # 引数パース
 parser = argparse.ArgumentParser()
@@ -38,4 +38,4 @@ output = proc.stdout.decode("cp932", errors="replace")
 print(output)
 
 # 処理を別ファイルの関数に委譲
-process_video_files(output, WORKDIR, YTDLP2JSON, NICOJSON2XML, DANMAKU2ASS)
+convert_json_to_ass_dir(output, WORKDIR, YTDLP2JSON, NICOJSON2XML, DANMAKU2ASS)

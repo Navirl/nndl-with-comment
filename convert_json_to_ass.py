@@ -4,7 +4,7 @@ import sys
 import argparse
 
 
-def process_video_files(output, workdir, ytdlp2json, nicojson2xml, danmaku2ass):
+def convert_json_to_ass_dir(output, workdir, ytdlp2json, nicojson2xml, danmaku2ass):
     """yt-dlpの出力から動画ファイルを処理する"""
     for line in output.splitlines():
         if not line.strip():
@@ -77,4 +77,4 @@ if __name__ == "__main__":
     print(f"見つかったファイル:\n{output}\n")
     
     # 処理実行
-    process_video_files(output, WORKDIR, YTDLP2JSON, NICOJSON2XML, DANMAKU2ASS)
+    convert_json_to_ass_dir(output, WORKDIR, YTDLP2JSON, NICOJSON2XML, DANMAKU2ASS)
