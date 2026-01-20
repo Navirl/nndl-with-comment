@@ -33,10 +33,11 @@ proc = subprocess.run(
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     cwd=WORKDIR,
+    text=True,
+    errors="replace"
 )
 
-# Windows(cp932) でデコード
-output = proc.stdout.decode("cp932", errors="replace")
+output = proc.stdout
 print(output)
 
 # 処理を別ファイルの関数に委譲
