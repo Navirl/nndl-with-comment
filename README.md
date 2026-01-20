@@ -2,6 +2,9 @@
 Download niconico with ass
 
 ## Usage
+
+First, install python and `git clone --recurse-submodules https://github.com/Navirl/nndl-with-comment.git`
+
 ```
 python nndl_with_comment.py NICOURL
 
