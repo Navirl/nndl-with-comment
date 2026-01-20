@@ -1,5 +1,6 @@
 # nndl-with-comment
 Download niconico with ass
+(Used claude in code writing)
 
 ## Usage
 
@@ -21,5 +22,5 @@ Convert json in PATH to ass.
 --location, -l PATH    Decide workdir contained nicodanmaku2ass, nicojson2xml and yt-dlpjson2nicojson.
                        default, location of convert_json_to_ass.py.
 
-
 ```
+
