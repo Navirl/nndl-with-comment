@@ -3,7 +3,7 @@ from pathlib import Path
 import subprocess
 import sys
 import argparse
-from process_video import convert_json_to_ass_dir
+from convert_json_to_ass import convert_json_to_ass_dir
 
 # 引数パース
 parser = argparse.ArgumentParser()
