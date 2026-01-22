@@ -29,7 +29,7 @@ if not url:
 
 # yt-dlp 実行（バイトで受け取る）
 proc = subprocess.run(
-    ["yt-dlp", "--no-warning", "--print", "after_move:filepath", url],
+    ["yt-dlp", "--write-subs", "--no-warning", "--print", "after_move:filepath", url],
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     cwd=WORKDIR,
