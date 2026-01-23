@@ -9,7 +9,7 @@ from convert_json_to_ass import convert_json_to_ass_dir
 parser = argparse.ArgumentParser()
 parser.add_argument("url", help="動画のURL")
 parser.add_argument("-l", "--location", help="作業ディレクトリ")
-parser.add_argument("--only-comments", action="store_true", help="コメントのみダウンロード（動画はスキップ）") 
+parser.add_argument("--skip-download", action="store_true", help="コメントのみダウンロード（動画はスキップ）") 
 args = parser.parse_args()
 
 # workdirの決定
@@ -29,7 +29,7 @@ if not url:
     sys.exit("URL が入力されていません")
 
 ytdlp_cmd = ["yt-dlp", "--write-subs", "--no-warning", "--print", "after_move:filepath"]
-if args.only_comments:
+if args.skip_download:
     ytdlp_cmd.append("--skip-download")
 ytdlp_cmd.append(url)
 
