@@ -15,7 +15,7 @@ Download niconico with ass.
 --location, -l PATH    Decide workdir contained nicodanmaku2ass, nicojson2xml and yt-dlpjson2nicojson.
                        default, location of nndl_with_comment.py.
 
---skip-download        Download only comments. （skip video）
+--skip-download, -s    Download only comments. （skip video）
 
 
 python convert_json_to_ass.py PATH
