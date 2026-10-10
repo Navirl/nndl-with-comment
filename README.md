@@ -17,6 +17,8 @@ Download niconico with ass.
 
 --skip-download, -s    Download only comments. （skip video）
 
+--format, -f FORMAT    Video quality (format) passed to yt-dlp -f. e.g. bestvideo+bestaudio
+
 
 python convert_json_to_ass.py PATH
 
