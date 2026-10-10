@@ -28,14 +28,15 @@ url = args.url.strip()
 if not url:
     sys.exit("URL が入力されていません")
 
-ytdlp_cmd = ["yt-dlp", "--write-subs", "--no-warning", "--print", "after_move:filepath"]
+# ニコニコのコメント(comments)とYouTubeのライブチャット(live_chat)を取得
+ytdlp_cmd = ["yt-dlp", "--write-subs", "--sub-langs", "comments,live_chat", "--no-warning", "--print", "after_move:filepath"]
 if args.skip_download:
     ytdlp_cmd.append("--skip-download")
 ytdlp_cmd.append(url)
 
 # yt-dlp 実行（バイトで受け取る）
 proc = subprocess.run(
-    ["yt-dlp", "--write-subs", "--no-warning", "--print", "after_move:filepath", url],
+    ytdlp_cmd,
     stdout=subprocess.PIPE,
     stderr=subprocess.PIPE,
     cwd=WORKDIR,
